@@ -1,11 +1,26 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
 
-export const ParksData = createContext({});
+const ParksData = createContext({});
 
-export const useParksData = () => useContext(ParksData);
+async function getParksData (){
+    const npsapi = await fetch('https://developer.nps.gov/api/v1/webcams?api_key=BxxA9qGfk0o1ts6bdhcqbuUHef6CAfflNrNPU3TD')
+    const npsjson = await npsapi.json()
 
-export const ParksDataProvider = ({ children }) => {
-    const [data, setData] = useState({})
+    return npsjson
+}
+
+export function ParksDataProvider({ children }) {
+    const [parkdata, setData] = useState({})
+
+    useEffect(() => {
+        getParksData().then((value) => {
+            setData(value.data)
+        })
+    }, [])
   
-    return <ParksData.Provider value={{ data, setData }}>{children}</ParksData.Provider>
+    return <ParksData.Provider value={{ parkdata, setData }}>{children}</ParksData.Provider>
+}
+
+export function useParksData() {
+    return useContext(ParksData)
 }
