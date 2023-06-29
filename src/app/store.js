@@ -21,6 +21,37 @@ export function ParksDataProvider({ children }) {
     return <ParksData.Provider value={{ parkdata, setData }}>{children}</ParksData.Provider>
 }
 
+export function useParksList(){
+    const { parkdata } = useContext(ParksData)
+
+    const allParksList = new Map()
+
+    if(Object.keys(parkdata).length > 0){
+        parkdata.forEach((park) => {
+        
+            park.relatedParks.forEach(item => {
+
+                if(allParksList.get(item.parkCode) == undefined){
+
+                    allParksList.set(item.parkCode, { 
+                        name: item.fullName,
+                        data: [ park ] 
+                    })
+
+                } else {
+
+                    const parkItemData = allParksList.get(item.parkCode);
+                    parkItemData.data.push(park)
+
+                }
+            })
+
+        })
+    }
+
+    return allParksList
+}
+
 export function useParksData() {
     return useContext(ParksData)
 }

@@ -1,22 +1,28 @@
-import { useParksData } from '../store'
-import WebCam from './webcam';
+import { Suspense } from 'react'
+import { useParksList } from '../store'
+import ParkItem from './parkitem';
 
 import './webcamlist.css';
 
 export default function WebCamList () {
 
-	const { parkdata } = useParksData()
+	const parksList = useParksList();
+
+	const parkItems = [];
+	parksList.forEach((item, index) => {
+		parkItems.push(
+			<ParkItem key={index} data={item} />
+		)
+	})
 
 	return (
-		<div className="webcamlist">
-			{ parkdata.length > 0 && 
-				parkdata.map((item, index) => {
-					return ( 
-						<WebCam key={index} data={item} />
-					)
-				})
-			}
-		</div>
+		<ul className="webcamlist">
+			
+			<Suspense>
+				{ parkItems }
+			</Suspense>
+			
+		</ul>
 	)
 
 }
