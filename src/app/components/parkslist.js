@@ -2,8 +2,6 @@ import { Suspense } from 'react'
 import { useParksList } from '../store'
 import ParkItem from './parkitem';
 
-import './webcamlist.css';
-
 export default function WebCamList () {
 
 	const parksList = useParksList();
@@ -16,7 +14,7 @@ export default function WebCamList () {
 	})
 
 	return (
-		<ul className="webcamlist">
+		<ul className="parks-list">
 			
 			<Suspense>
 				{ parkItems }

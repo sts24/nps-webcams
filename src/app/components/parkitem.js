@@ -1,13 +1,10 @@
-import './webcam.css';
-
+import Link from 'next/link'
 
 export default function ParkItem ({ data }) {
 
-    
-
     return (
-        <li>
-            <button>{data.name}</button>
+        <li class="park-item">
+            <Link href={data.slug} class="park-item__link">{data.name}</Link>
         </li>
     )
 

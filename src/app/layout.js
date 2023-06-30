@@ -1,9 +1,7 @@
-import './globals.css'
+import '@/app/styles/globals.css'
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <>{children}</>
   )
 }

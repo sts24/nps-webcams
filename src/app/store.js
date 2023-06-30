@@ -35,6 +35,7 @@ export function useParksList(){
 
                     allParksList.set(item.parkCode, { 
                         name: item.fullName,
+                        slug: `/${item.parkCode}`,
                         data: [ park ] 
                     })
 
