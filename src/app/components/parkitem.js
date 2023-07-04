@@ -1,10 +1,12 @@
 import Link from 'next/link'
 
+import styles from '@/app/styles/park-item.module.scss'
+
 export default function ParkItem ({ data }) {
 
     return (
-        <li class="park-item">
-            <Link href={data.slug} class="park-item__link">{data.name}</Link>
+        <li className={styles.parkItem}>
+            <Link href={data.slug} className={styles.parkItemLink}>{data.name}</Link>
         </li>
     )
 

@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import { useParksList } from '../store'
 import ParkCamera from '@/app/components/parkcamera'
 
+import styles from '@/app/styles/page-detail.module.scss'
+import { Pacifico } from '@/app/styles/fonts'
+
 export default function ParkDetail(){
 
   const router = useRouter()
@@ -19,8 +22,8 @@ export default function ParkDetail(){
     })
 
     return (
-      <div className="park-detail">
-        <header className="park-detail__heading">{parkDetailData.name}</header>
+      <div>
+        <header className={`${styles.heading} ${Pacifico.className}`}>{parkDetailData.name}</header>
         <Suspense>
           { parkCameras }
         </Suspense>

@@ -2,21 +2,20 @@ import Layout from '@/app/layout'
 import ParksList from '../app/components/parkslist'
 import ParkDetail from '../app/components/parkdetail'
 
-import '@/app/styles/page.css'
-
+import styles from '@/app/styles/page.module.scss'
    
 export default function Home() {
 
   return (
     <Layout>
-      <main className="main-container">
-        <div className="list-container">
+      <div className={styles.mainContainer}>
+        <div>
           <ParksList />
         </div>
-        <div className="detail-container">
+        <div>
           <ParkDetail />
         </div>
-      </main>
+      </div>
     </Layout>
   )
 }
