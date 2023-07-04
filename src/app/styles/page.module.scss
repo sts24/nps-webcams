@@ -1,6 +1,17 @@
 .mainContainer {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  padding: 3rem;
+  grid-template-rows: 100%;
   gap: 3rem;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.listContainer {
+  overflow: scroll;
+}
+
+.detailContainer {
+  overflow: scroll;
+  padding: 2rem 2rem 2rem 0;
 }
