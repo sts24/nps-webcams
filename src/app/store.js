@@ -50,7 +50,9 @@ export function useParksList(){
         })
     }
 
-    return allParksList
+    const sortedParksList = new Map([...allParksList].sort());
+
+    return sortedParksList
 }
 
 export function useParksData() {
