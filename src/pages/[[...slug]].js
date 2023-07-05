@@ -8,14 +8,14 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className={styles.mainContainer}>
+      
         <div className={styles.listContainer}>
           <ParksList />
         </div>
         <div className={styles.detailContainer}>
           <ParkDetail />
         </div>
-      </div>
+      
     </Layout>
   )
 }

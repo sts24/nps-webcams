@@ -1,17 +1,15 @@
-.mainContainer {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 100%;
-  gap: 3rem;
-  max-height: 100vh;
-  overflow: hidden;
-}
+// .mainContainer {
+//   display: grid;
+//   grid-template-columns: 3fr 1fr;  
+//   gap: 3rem;
+//   overflow: hidden;
+// }
 
 .listContainer {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .detailContainer {
-  overflow: scroll;
-  padding: 2rem 2rem 2rem 0;
+  overflow-y: scroll;
+  padding: 2rem;
 }

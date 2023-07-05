@@ -1,0 +1,32 @@
+.header {
+  background-color: var(--color-black);
+  padding: 4rem 2rem 1rem 2rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--color-white);
+  font-family: var(--font-sans-serif);
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.25rem;
+  
+  p {
+    padding: 0;
+  }
+
+  a {
+    color: var(--color-green-light);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
