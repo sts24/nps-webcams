@@ -7,7 +7,7 @@ export default function Header(){
       <div className={styles.title}>NPS Webcams</div>
 
       <div className={styles.description}>
-        <p><a href="https://www.smithscott.net/portfolio/nps-webcams" target="_blank">What is this?</a></p>
+        <p><a href="https://smithscott.net/journal/nps-webcams/" target="_blank">What is this?</a></p>
       </div>
     </header>
   )
