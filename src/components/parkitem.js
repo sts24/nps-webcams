@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import styles from '@/app/styles/park-item.module.scss'
+import styles from '@//styles/park-item.module.scss'
 
 export default function ParkItem ({ data }) {
 

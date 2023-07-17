@@ -1,8 +1,8 @@
-import Layout from '@/app/layout'
-import ParksList from '../app/components/parkslist'
-import ParkDetail from '../app/components/parkdetail'
+import Layout from '@/layout'
+import ParksList from '../components/parkslist'
+import ParkDetail from '../components/parkdetail'
 
-import styles from '@/app/styles/page.module.scss'
+import styles from '@//styles/page.module.scss'
    
 export default function Home() {
 

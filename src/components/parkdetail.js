@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { useRouter } from 'next/router'
 import { useParksList } from '../store'
-import ParkCamera from '@/app/components/parkcamera'
+import ParkCamera from '@/components/parkcamera'
 
-import styles from '@/app/styles/page-detail.module.scss'
-import { Pacifico } from '@/app/styles/fonts'
+import styles from '@//styles/page-detail.module.scss'
+import { Pacifico } from '@/styles/fonts'
 
 export default function ParkDetail(){
 

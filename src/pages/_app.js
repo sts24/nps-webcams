@@ -1,7 +1,7 @@
-import { ParksDataProvider } from "@/app/store"
-import Header from '@/app/components/Header'
-import '@/app/styles/globals.scss'
-import { NationalPark } from '@/app/styles/fonts'
+import { ParksDataProvider } from "@/store"
+import Header from '@/components/Header'
+import '@//styles/globals.scss'
+import { NationalPark } from '@/styles/fonts'
 
 function App({ Component, pageProps }) {
   return(

@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import { useParksList } from '../store'
 import ParkItem from './parkitem';
 
-import styles from '@/app/styles/park-list.module.scss'
+import styles from '@//styles/park-list.module.scss'
 
 export default function WebCamList () {
 

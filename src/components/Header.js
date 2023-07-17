@@ -1,4 +1,4 @@
-import styles from '@/app/styles/header.module.scss'
+import styles from '@//styles/header.module.scss'
 
 export default function Header(){
 

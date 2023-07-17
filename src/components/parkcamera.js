@@ -1,6 +1,6 @@
-import Arrow from '@/app/svg/arrow.svg'
+import Arrow from '@//svg/arrow.svg'
 
-import styles from '@/app/styles/park-camera.module.scss'
+import styles from '@//styles/park-camera.module.scss'
 
 export default function ParkCamera({ data }){
 
